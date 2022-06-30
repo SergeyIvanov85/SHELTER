@@ -1,0 +1,160 @@
+.donation {
+  background-color: $basic-light;
+}
+
+.donation__wrap {
+  @include big_screen;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-top: 4.25%;
+  padding-left: 7.52%;
+  padding-bottom: 5.25%;
+
+  @media (max-width: 1024px) {
+    justify-content: center;
+    padding-left: 4.78%;
+    padding-top: 10.6%;
+  }
+
+  @media (max-width: 740px) {
+    justify-content: center;
+    padding-left: 0%;
+    padding-top: 13.3%;
+  }
+}
+
+.donation__content {
+  width: 40%;
+
+  @media (max-width: 1024px) {
+    order: 1;
+    width: 57%;
+    margin-bottom: 8.2%;
+  }
+
+  @media (max-width: 740px) {
+    width: 90%;
+  }
+}
+
+.donation__title {
+  @include title;
+  margin-bottom: 4.8%;
+  width: 100%;
+
+  @media (max-width: 740px) {
+    @include title-mobile;
+    text-align: center;
+    margin-bottom: 7.2%;
+    margin-left: 1px;
+  }
+}
+
+.donation__bank {
+  @include font-main;
+  color: $basic-dark;
+  font-size: 15px;
+  line-height: 110%;
+  letter-spacing: 0.06em;
+  margin-bottom: 4.7%;
+
+  @media (max-width: 1024px) {
+    margin-bottom: 4.6%;
+  }
+
+  @media (max-width: 740px) {
+    @include font-second;
+    text-align: center;
+    font-size: 14px;
+    line-height: 160%;
+    letter-spacing: 0.5px;
+    margin-bottom: 7.4%;
+  }
+}
+
+.donation__acount {
+  position: relative;
+  background-color: $base-pink;
+  color: $basic-dark;
+  width: 349px;
+  height: 43px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 9px;
+  border: none;
+  font-family: $main-font;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 23px;
+  outline: none;
+  padding-left: 46px;
+  letter-spacing: 0.06em;
+  margin-bottom: 20px;
+
+  &:hover {
+    background-color: $light-pink;
+  }
+
+  @media (max-width: 740px) {
+    height: 43px;
+    width: 281px;
+    margin: 0 auto;
+    font-size: 15px;
+    line-height: 110%;
+    letter-spacing: 0.06em;
+    margin-bottom: 20px;
+  }
+
+  &::before {
+    display: block;
+    position: absolute;
+    content: url(../../assets/images/credit-card.svg);
+    width: 22px;
+    height: 32px;
+    left: 15px;
+    top: 10px;
+
+    @media (max-width: 740px) {
+      top: 10px;
+      left: 14px;
+    }
+  }
+}
+
+.donation__text {
+  width: 380px;
+  font-family: $text-font;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 18px;
+  font-style: italic;
+  color: $gray;
+
+  @media (max-width: 740px) {
+    width: 280px;
+    margin: 0 auto;
+    text-align: justify;
+    margin-bottom: 15px;
+  }
+}
+
+.donation__img {
+  margin-right: 30px;
+
+  @media (max-width: 1024px) {
+    order: 2;
+    margin-right: 5.2%;
+    margin-bottom: 8.15%;
+  }
+
+  @media (max-width: 740px) {
+    width: 260px;
+    height: 135.2px;
+    margin: 0 auto;
+    margin-bottom: 25px;
+  }
+}

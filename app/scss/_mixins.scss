@@ -1,0 +1,124 @@
+@mixin visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+@mixin list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+}
+
+@mixin link {
+  &:hover {
+    cursor: pointer;
+
+  }
+
+  &:active,
+  &:focus {
+    border-bottom: 3px solid $base-pink;
+    outline: none;
+
+  }
+
+
+}
+
+@mixin font-main {
+  font-family: $main-font;
+  font-style: normal;
+  font-weight: normal;
+  color: #FFFFFF;
+}
+
+@mixin font-second {
+  font-family: $text-font;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 24px;
+}
+
+@mixin big_screen {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@mixin big_screen {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@mixin middle_screen {
+  max-width: 960px;
+  padding: 0 30px;
+  margin: 0 auto;
+
+}
+
+@mixin title {
+  font-family: $main-font;
+  font-size: 35px;
+  font-weight: normal;
+  line-height: 45px;
+  letter-spacing: 0.06em;
+}
+
+@mixin title_mobile {
+  font-family: $main-font;
+  font-weight: normal;
+  font-size: 25px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+}
+
+@mixin subtitle {
+  font-family: $main-font;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: $basic-dark;
+}
+
+
+@mixin color-button {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 2px;
+  padding-left: 2px;
+  border-radius: 26px;
+  border: none;
+  font-family: $main-font;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 17px;
+  line-height: 19px;
+  letter-spacing: 1px;
+  color: $basic-too-dark;
+  height: 52px;
+  outline: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $light-pink;
+  }
+
+  &:active,
+  &:focus {
+    background-color: $light-pink;
+    opacity: 0.7;
+  }
+}

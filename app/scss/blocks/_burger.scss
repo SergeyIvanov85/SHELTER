@@ -1,0 +1,142 @@
+.burger {
+  position: absolute;
+  top: 0;
+  right: 0px;
+  width: 320px;
+  background: #292929;
+  padding-top: 250px;
+  height: calc(var(--vh, 1vh) * 100);
+  z-index: 2;
+  display: none;
+
+  &--pets {
+    background: white;
+  }
+}
+
+.burger--active {
+  display: block;
+}
+
+.burger__nav {
+  @include list;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-align: center;
+}
+
+
+
+.burger__item {
+  margin: 0;
+  margin-bottom: 41px;
+}
+
+.burger__link {
+  @include font-second;
+  @include link;
+  color: $btn-light;
+  font-size: 32px;
+  line-height: 51px;
+  margin: 0;
+
+
+
+  &:hover {
+    cursor: pointer;
+    color: white;
+  }
+
+  &:active,
+  &:focus {
+    border-bottom: 3px solid $base-pink;
+    outline: none;
+    color: white;
+  }
+
+  &--pets {
+    color: $basic-dark;
+
+    &:hover {
+
+      color: $basic-too-dark;
+    }
+
+    &:active,
+    &:focus {
+      color: $basic-too-dark;
+    }
+  }
+
+  &--active {
+    border-bottom: 3px solid $base-pink;
+    outline: none;
+  }
+
+  &--disabled {
+    pointer-events: none;
+    cursor: default;
+  }
+}
+
+.burger__link--disabled {
+  pointer-events: none;
+  cursor: default;
+}
+
+.burger__logo {
+  position: absolute;
+  top: 30px;
+  left: 10px;
+  opacity: 0;
+}
+
+.burger__logo--open {
+  animation: burger_logo_animation .5s 1s forwards;
+  -webkit-animation: burger_logo_animation .5s 1s forwards;
+}
+
+@keyframes burger_logo_animation {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.burger__animation-in {
+  animation: burger__side-in 1s forwards;
+  -webkit-animation: burger__side-in 1s forwards;
+}
+
+@keyframes burger__side-in {
+  from {
+
+    right: -320px;
+  }
+
+  to {
+
+    right: 0px;
+  }
+}
+
+.burger__animation-out {
+  animation: burger__side-out 2s;
+  -webkit-animation: burger__side-out 2s;
+}
+
+@keyframes burger__side-out {
+  from {
+    right: 0px;
+  }
+
+  to {
+    right: -320px;
+
+  }
+}
